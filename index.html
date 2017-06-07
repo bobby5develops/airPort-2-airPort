@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="eng">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>airport mile-tracker</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,12 +16,33 @@
     </head>
     <body>
         <div>
+            <!--list of westcoast airports-->
             <label for="westcoast">
+                West Coast Airports
                 <input type="text" name="westcoast_airports" id="westcoast_search">
             </label>
+
+            <select name="westcoast_airports" id="westcoast_airports" data-placeholder="Choose a WestCoast Airport...">
+                <option value="westcoast_airports"></option>
+                <option value="westcoast_airports"></option>
+                <option value="westcoast_airports"></option>
+            </select>
+
+
+            <!--list of eastcoast airports-->
             <label for="eastcoast">
-                <input type="text" name="eastcoast_airports" id="eastcoast_search">
+                East Coast Airports
+                <input type="text" name="eastcoast_airports" id="eastcoast_search" data-placeholder="Choose a EastCoast Airport...">
             </label>
+
+            <select name="eastcoast_airports" id="eastcoast_airports">
+                <option value="eastcoast"></option>
+                <option value="eastcoast"></option>
+                <option value="eastcoast"></option>
+            </select>
+
+
+            <!--list of all united states airports-->
             <datalist id="national_airports">
                 <option value="airport"></option>
                 <option value="airport"></option>
