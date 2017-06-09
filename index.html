@@ -15,11 +15,11 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <div>
+        <section class="container">
             <!--list of westcoast airports-->
             <label for="westcoast">
                 West Coast Airports
-                <input type="text" name="westcoast_airports" id="westcoast_search">
+                <input type="search" value="inputFld" name="westcoast_airports" id="westcoast_search" data-list="JFK, Charlotte, Newark, Richmond, Miami" data-minchars="" data-maxchars="" placeholder="">
             </label>
 
             <select name="westcoast_airports" id="westcoast_airports" data-placeholder="Choose a WestCoast Airport...">
@@ -32,7 +32,7 @@
             <!--list of eastcoast airports-->
             <label for="eastcoast">
                 East Coast Airports
-                <input type="text" name="eastcoast_airports" id="eastcoast_search" data-placeholder="Choose a EastCoast Airport...">
+                <input type="search" value="inputFld" name="eastcoast_airports" id="eastcoast_search" data-placeholder="Choose a EastCoast Airport...">
             </label>
 
             <select name="eastcoast_airports" id="eastcoast_airports">
@@ -48,7 +48,7 @@
                 <option value="airport"></option>
                 <option value="airport"></option>
             </datalist>
-        </div>
+        </section>
 
 
 
