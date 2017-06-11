@@ -16,38 +16,28 @@
     </head>
     <body>
         <section class="container">
-            <!--list of westcoast airports-->
-            <label for="westcoast">
-                West Coast Airports
-                <input type="search" value="inputFld" name="westcoast_airports" id="westcoast_search" data-list="JFK, Charlotte, Newark, Richmond, Miami" data-minchars="" data-maxchars="" placeholder="">
-            </label>
+            <div id="tracker">
+                <!--list of westcoast airports-->
+                <label for="westcoast">
+                    West Coast Airports
+                    <input type="text" id="westcoast_search" list="json-datalist" placeholder="Check Westcoast airports...">
+                    <datalist id="json-datalist" class="westCoast_datalist"></datalist>
+                </label>
 
-            <select name="westcoast_airports" id="westcoast_airports" data-placeholder="Choose a WestCoast Airport...">
-                <option value="westcoast_airports"></option>
-                <option value="westcoast_airports"></option>
-                <option value="westcoast_airports"></option>
-            </select>
+                <!--list of eastcoast airports-->
+                <label for="eastcoast">
+                    East Coast Airports
+                    <input type="text" id="eastcoast_search" list="json-datalist" placeholder="Check Eastcoast airports...">
+                    <datalist id="json-datalist" class="eastCoast_datalist"></datalist>
+                </label>
+            </div>
 
+            <div id="hero">
+                <h1>Airport Tracker</h1>
+            </div>
 
-            <!--list of eastcoast airports-->
-            <label for="eastcoast">
-                East Coast Airports
-                <input type="search" value="inputFld" name="eastcoast_airports" id="eastcoast_search" data-placeholder="Choose a EastCoast Airport...">
-            </label>
+            <div id="map"></div>
 
-            <select name="eastcoast_airports" id="eastcoast_airports">
-                <option value="eastcoast"></option>
-                <option value="eastcoast"></option>
-                <option value="eastcoast"></option>
-            </select>
-
-
-            <!--list of all united states airports-->
-            <datalist id="national_airports">
-                <option value="airport"></option>
-                <option value="airport"></option>
-                <option value="airport"></option>
-            </datalist>
         </section>
 
 
@@ -70,13 +60,39 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/app.js"></script>
+        <script type="text/javascript">
+           /* window.onload = (function (load) {
+            	setTimeout(function () {
+                    airPort.init();
+                }, 1000);
+            });*/
+
+           function ready(){
+            	setTimeout(function () {
+                    console.log('ready fn');
+                    var dataList = document.querySelector('#dataList');
+                    airPort.init();
+                }, 3000);
+            }
+
+           if (document.readyState == 'loading') {
+               document.addEventListener('DOMContentLoaded', ready);
+           } else {
+               ready();
+           }
+
+           // current state
+           console.log(document.readyState);
+
+           // print state changes
+           document.addEventListener('readystatechange', function () {
+               console.log(document.readyState);
+           });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
